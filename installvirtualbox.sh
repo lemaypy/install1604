@@ -1,3 +1,5 @@
+#! /bin/bash
+
 echo "Please enter username: "
 read username
 sudo echo "deb http://download.virtualbox.org/virtualbox/debian xenial contrib" > /etc/apt/sources.list.d/virtualbox.list
