@@ -1,7 +1,10 @@
 #! /bin/bash
 
-read -p "started with sudo? If not press Ctrl-C"
-echo "Please enter username: (dev?)"
+if [ "$USER" != "root" ]; then
+  echo "Please restart with sudo"
+  exit
+fi
+echo "Please enter username:"
 read username
 mkdir /opt/dev/java/maven
 cd /opt/dev/java/maven
